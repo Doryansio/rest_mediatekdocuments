@@ -213,6 +213,7 @@ class AccessBDD {
     
     public function selectUtilisateur($champs)      
     {
+        
         $param = array(
             "mail" => $champs["mail"],
             "password" => $champs["password"]
@@ -224,7 +225,7 @@ class AccessBDD {
         $req .= "or u.nom = :mail ";
         $req .= "and u.password = :password";
         
-        //var_dump('21654564653465465165496465');
+        
         return $this->conn->query($req, $param);
         
         
